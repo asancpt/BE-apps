@@ -3,6 +3,7 @@
 
 options(bitmapType='cairo')
 if (length(intersect(dir(), "result")) == 0) { system("mkdir result") }
+system('cp plotly.json ./result')
 
 input_deck <- 'Data NCAResult4BE
 Design 2x2'
@@ -42,4 +43,3 @@ setwd('./result')
 BE::be2x2(test_data, pk_parameters)
 
 dir(pattern = '*.pdf')
-
