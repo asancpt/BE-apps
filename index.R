@@ -41,14 +41,15 @@ pk_parameters <- c(AUClast = 'AUClast', Cmax = 'Cmax', Tmax = 'Tmax')
 
 setwd('./result')
 capture.output(BE::be2x2(test_data, pk_parameters), file = 'report.txt')
-setwd('../')
+system('convert Rplots.pdf Rplots.jpg')
+system('convert Rplots1.pdf Rplots1.jpg')
+system('convert Rplots2.pdf Rplots2.jpg')
+system('convert Rplots3.pdf Rplots3.jpg')
+system('convert Rplots4.pdf Rplots4.jpg')
+system('convert Rplots5.pdf Rplots5.jpg')
+setwd('..')
 
-system('convert -density 300 result/Rplots.pdf result/Rplots.jpg')
-system('convert -density 300 result/Rplots1.pdf result/Rplots1.jpg')
-system('convert -density 300 result/Rplots2.pdf result/Rplots2.jpg')
-system('convert -density 300 result/Rplots3.pdf result/Rplots3.jpg')
-system('convert -density 300 result/Rplots4.pdf result/Rplots4.jpg')
-system('convert -density 300 result/Rplots5.pdf result/Rplots5.jpg')
+print(getwd())
 
 knitr::knit2html("report.Rmd", 
                  "result/report.html", 
