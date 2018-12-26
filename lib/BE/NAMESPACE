@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+importFrom("stats", "pt", "qt", "sd", "pf", "median", "pwilcox", "qwilcox")
+importFrom("graphics", "arrows", "lines", "text", "axis", "boxplot", "mtext", "par", "plot")
+importFrom("grDevices", "dev.new")
+importFrom("utils", "read.csv", "capture.output")
+import("rtf")

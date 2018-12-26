@@ -1,0 +1,25 @@
+RTF                     The RTF class
+addHeader.RTF           Insert a header into the RTF document
+addNewLine.RTF          Insert a new line into the RTF document
+addPageBreak.RTF        Insert a page break into the RTF document
+                        optionally specifying new page settings
+addParagraph.RTF        Insert a paragraph into the RTF document
+addPlot.RTF             Insert a plot into the RTF document
+addPng.RTF              Insert an existing PNG image into the RTF
+                        document
+addSessionInfo.RTF      Insert session information into the RTF
+                        document
+addTOC.RTF              Insert table of contents field
+addTable.RTF            Insert a table into the RTF document
+addText.RTF             Insert text into the RTF document
+addTrellisObject.RTF    Insert a trellis plot object into the RTF
+                        document
+decreaseIndent.RTF      Decrease RTF document indent
+done.RTF                Write and close the RTF output
+endParagraph.RTF        End a paragraph in the RTF document
+increaseIndent.RTF      Increase RTF document indent
+rtf-package             Package rtf
+rtf.forest.plot         Get an RTF encoded forest plot
+setFontSize.RTF         Set RTF document font size
+startParagraph.RTF      Start a new paragraph in the RTF document
+view.RTF                View encoded RTF

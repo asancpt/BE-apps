@@ -1,0 +1,27 @@
+BE-package              Bioequivalence Study Data Analysis
+NCAResult4BE            An Example of Noncompartmental Analysis Result
+                        for Bioequivalence Test
+be2x2                   Bioequivalence test of a 2x2 study
+ci2cv                   Coefficient of variation (CV) from a confidence
+                        interval of previous 2x2 study
+ci2mse                  Mean squared error (MSE) from a confidence
+                        interval of previous 2x2 study
+cv2mse                  Mean squared error (MSE) from coefficient of
+                        variation (CV)
+hodges                  Hodges-Lehmann estimation for a variable of a
+                        2x2 study
+mse2cv                  Coefficient of variation (CV) from mean squared
+                        error (MSE)
+plot2x2                 Plot bioequivalence variable of a 2x2 study
+pow2x2ci                Power using a confidence interval of previous
+                        2x2 study
+pow2x2mse               Power using mean squared error (MSE) of
+                        previous 2x2 study
+powcv                   Power using coefficient of variation (CV)
+powmse                  Power using mean squared error (MSE)
+ss2x2ci                 Sample size using a confidence interval of
+                        previous 2x2 study
+sscv                    Sample size using coefficient of variation (CV)
+ssmse                   Sample size using mean squared error (MSE)
+test2x2                 Bioequivalence test for a variable of a 2x2
+                        study

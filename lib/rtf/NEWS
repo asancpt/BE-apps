@@ -1,0 +1,70 @@
+CHANGES IN 0.4-13 (2014-08-07)
+-----------------------------
+Added explicit imports and exports to resolve CRAN checks.
+
+CHANGES IN 0.4-12 (2014-08-07)
+-----------------------------
+Added color table.
+
+CHANGES IN 0.4-11 (2013-11-12)
+-----------------------------
+Changed to author to use Authors@R
+
+CHANGES IN 0.4-10 (2013-08-20)
+-----------------------------
+Changed imports to include R.methodsS3.
+Changed license to GPL.
+Moved gsubfn to Suggests instead of Depends.
+Removed dependency that forced X-windows start when the library was loaded.
+Removed 'methods' dependency (thanks to Henrik Bengtsson for help).
+
+CHANGES IN 0.4-9 (2013-08-18)
+-----------------------------
+Unreleased version.
+
+CHANGES IN 0.4-8 (2013-06-04)
+-----------------------------
+Added support for etables.
+
+CHANGES IN 0.4-7 (2012-08-22)
+-----------------------------
+Added table of contents support.
+Added page number support in footers.
+Added right justify for numeric values in tables.
+Added full Greek alphabet to .convert function.
+
+CHANGES IN 0.4-6 (2012-06-19)
+-----------------------------
+Added xtable to suggests list.
+
+CHANGES IN 0.4-5 (2012-06-17)
+-----------------------------
+Corrected an incorrect Greek symbol substitution and added support for full Greek alphabet.
+Fixed hidden method documentation with Rdoc annotation: @keyword -internal
+Added package vignette.
+
+CHANGES IN 0.4-4 (2012-04-11)
+-----------------------------
+Added documentation to output ggplot2 plots.
+Added generic addPng method for inserting existing images.
+Fixed output of some UTF-8 symbols method that were not being escaped properly.
+Fixed a problem with the row.names parameter in addTable for data.frames.
+
+CHANGES IN 0.4-3 (2011-10-03)
+-----------------------------
+Added NAMESPACE as required for packages in R-2.14.0.
+Added parameter to rotate lattice plots in RTF output.
+Added parameter for automatic column width detection in tables.
+Fixed output of data.frame row names in addTable method.
+
+CHANGES IN 0.4-2 (2011-09-05)
+-----------------------------
+Updates to documentation.  Added forest plot code.
+
+CHANGES IN 0.4-1 (2011-09-04)
+-----------------------------
+Added license file and fixed an inappropriate is.nan call on a data frame.
+
+CHANGES IN 0.4-0 (2011-09-04)
+-----------------------------
+Submission to CRAN.
