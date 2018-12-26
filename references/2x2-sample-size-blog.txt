@@ -1,0 +1,116 @@
+https://m.blog.naver.com/PostView.nhn?blogId=kimmingul&logNo=220983513651&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+
+
+2x2 Bioequivalence Test의 Sample size 구하는 SAS 코드를 알아보고자 한다.
+
+
+
+생물학적동등성시험(bioequivalence test)는 기존 오리지날 의약품의 특허 만료 후, 타 제약사에서 해당 의약품을 동일하게 개발하여 판매하고자 할 때 수행하는 임상시험으로서, 기존 오리지날 의약품(Reference)과 새로 개발한 의약품(Test) 간의 약동학적 동등성을 주로 평가하게 된다.
+
+
+
+2x2 cross-over design이 가장 기본적인 디자인(통상 AB / BA) 으로서, 한 명의 대상자가 한번은 Reference drug, 다른 한번은 Test drug를 복용한 후 약동학 파라미터를 산출하여 이를 평가하므로, paired data라 하겠다.
+
+
+
+약동학 파라미터는 log-normal distribution을 따른다고 보며, Test 와 Reference에서 각각 산출된 약동학 파라미터 (AUC와 Cmax )의 geometric mean ratio가 0.8 ~ 1.25 이내일 때, 약동학적으로 동등하다고 평가하게 된다.
+
+
+
+따라서 Sample size를 산출하고자 할 때, SAS code는 다음과 같다.
+
+
+
+proc power;
+    pairedmeans test=equiv_ratio
+    dist = lognormal
+    lower = 0.8
+    upper = 1.25
+    power = 0.8 0.9
+    alpha = 0.05
+    meanratio = 1.0 1.05 1.1
+    corr = 0
+    cv = 0.2 0.3
+    npairs = .;
+run;
+ 
+
+
+
+이는 80%와 90% power인 경우와 T/R ratio가 1.0, 1.05, 1.1 인 경우, 그리고 intraCV가 0.2, 0.3인 경우의 조합들을 표로 보여주게 된다.
+
+이때 Test와 Reference 간의 correlation 은 0이라고 가정하였다.
+
+
+
+아래 그림에서 N pairs가 Total Sample size를 나타낸다.
+
+
+
+
+
+ 
+
+
+
+결과물에서 Equivalence Test for Paired Mean Ratio는 설정에 대해서 보여준다.
+
+여기에서는 분포는 Lognormal이고,Exact 방법을 사용하고 하한값은 0.8, 상한값은 1.25, alpha는 0.05, correlation은 0을 설정.
+
+그 다음 Computed N pairs 부분이 Sample size 결과 table이다.
+
+
+
+위 code에서 power를 0.8과 0.9로 가정하였을 경우와 CV값을 0.2과 0.3로 가정했을 경우, 그리고 Geometric mean Ratio가 1.0, 1.05, 1.1 로 3가지 경우를 가정한 것이다.
+
+그 결과 2 * 2 * 3 = 12가지 경우의 수에 따른 Sample size가 나온다. 여기서 N pairs 가 Sample size이다.
+
+여기서 여러가지 경우를 살펴본 것은 단지 각 값들이 변할 때, sample size가 어떻게 변화하는지를 살펴보기 위할 따름이다.
+
+연구자는 이 중에서 본인의 취향(?)에 맞는 값을 채택하면 될 뿐이다.
+
+
+
+하나씩 살펴보자면,
+
+
+
+많은 연구에서 검정력 Power는 0.8 또는 0.9를 채택한다. 어떤 값을 채택하든 그건 연구자 마음이다. 좀더 동등성결과를 검정력 높게 평가하고 싶다면 0.9를 채택하면 된다. (0.8을 채택한다고 해서 문제될 부분은 없다. 다만 원하는 연구결과를 얻을 가능성이 살짝 낮아질 뿐)
+
+
+
+CV값 (coefficient of variation) 을 여기에서는 0.2와 0.3으로 설정했는데, 이는 이전 연구 결과를 참고해서 설정하면 된다.
+
+이전 연구에서 얻은 주요평가항목(Bioequivalence test에서는 AUC와 Cmax 임)의 CV 값이 0.25라면, 여기에서 0.25라고 설정하면 된다. 이때 좀 보수적으로 sample size를 구하고 싶다면, 0.3으로 해도 되고 이는 연구자 마음이다.
+
+
+
+Geometric mean ratio는 대조군과 시험군 간의 ratio가 얼마나 일치할 것이라고 가정하는지 여부라고 보면 된다. 
+
+완전 일치하면 1.0, 조금 벗어날 것 같으면 1.05 또는 1.1을 선택하면 된다.
+
+당연하게도 ratio가 1.0에서 벗어날 수록 sample size는 증가한다.
+
+Bioequivalence test에서는 일반적으로 1.05를 채택하는 경향이 있으며, 이 역시 연구자 마음이다.
+
+
+
+
+
+이렇게 해서 결정된 sample size는 결국 연구를 design 할 때 사용한다.
+
+
+
+예를 들어 내가 Metformin이라는 약물의 Bioequivalence test를 진행할 경우,
+
+Original drug와 Test drug 간의 ratio가 1.05 정도 될 것 같고, CV값이 기존문헌에서 0.2로 나와있었다면,
+
+24명으로 연구를 디자인하고 진행하면 된다. (power 0.9로 고려시)
+
+만약 power 0.8로 고려하고 싶다면, 18명으로 진행해도 된다.
+
+
+
+단, 여기서 탈락률은 고려된 것이 아니므로, 연구 진행도중 탈락률이 20%정도 될 것으로 예상된다면 이에 대한 고려를 해주면 된다.
+
+24명 / 0.8 = 30명  즉, 30명으로 연구를 시작하고 중도에 20%가 탈락하게 되면, 최종적으로 24명으로 연구결과를 분석할 수 있게 될 것이다.
