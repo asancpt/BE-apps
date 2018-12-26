@@ -55,6 +55,7 @@ system(sprintf('%s -density 300 Rplots2.pdf Rplots2.png', magick))
 system(sprintf('%s -density 300 Rplots3.pdf Rplots3.png', magick))
 system(sprintf('%s -density 300 Rplots4.pdf Rplots4.png', magick))
 system(sprintf('%s -density 300 Rplots5.pdf Rplots5.png', magick))
+system('cp *.jpg *.png ../')
 setwd('..')
 
 # Rmarkdown ----
