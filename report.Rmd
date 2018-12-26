@@ -1,23 +1,27 @@
-# Plot
-
-![](Rplots.jpg)
-
-![](Rplots1.jpg)
-
-![](Rplots2.jpg)
-
-![](Rplots3.jpg)
-
-![](Rplots4.jpg)
-
-![](Rplots5.jpg)
-
-
 # Results
 
-```{bash echo = FALSE}
+```{bash echo = FALSE, result = 'asis'}
 cat result/report.txt
 ```
+
+# Plot
+
+## AUClast
+
+![](Rplots.png)
+![](Rplots1.png)
+
+## Cmax
+
+![](Rplots2.png)
+![](Rplots3.png)
+
+## Tmax
+
+![](Rplots4.png) 
+![](Rplots5.png)
+
+
 
 # References
 
