@@ -1,0 +1,27 @@
+# Plot
+
+![](Rplots.jpg)
+
+![](Rplots1.jpg)
+
+![](Rplots2.jpg)
+
+![](Rplots3.jpg)
+
+![](Rplots4.jpg)
+
+![](Rplots5.jpg)
+
+
+# Results
+
+```{bash echo = FALSE}
+cat result/report.txt
+```
+
+# References
+
+```{r}
+sessionInfo()
+```
+

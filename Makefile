@@ -1,3 +1,3 @@
 run:
-	rm -rf result \;
+	rm -rf ./result \;
 	Rscript index.R

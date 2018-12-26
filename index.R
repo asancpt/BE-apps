@@ -37,9 +37,20 @@ pk_parameters <- c(AUClast = 'AUClast', Cmax = 'Cmax', Tmax = 'Tmax')
 
 # pk_parameters %>%
 #   map( ~ print(test2x2(test_data, .x), na.print="") )
+#BE::be2x2(test_data, pk_parameters)
 
 setwd('./result')
-#BE::be2x2(test_data, c("AUClast", "Cmax", "Tmax"))
-BE::be2x2(test_data, pk_parameters)
+capture.output(BE::be2x2(test_data, pk_parameters), file = 'report.txt')
+setwd('../')
 
-dir(pattern = '*.pdf')
+system('convert -density 300 result/Rplots.pdf result/Rplots.jpg')
+system('convert -density 300 result/Rplots1.pdf result/Rplots1.jpg')
+system('convert -density 300 result/Rplots2.pdf result/Rplots2.jpg')
+system('convert -density 300 result/Rplots3.pdf result/Rplots3.jpg')
+system('convert -density 300 result/Rplots4.pdf result/Rplots4.jpg')
+system('convert -density 300 result/Rplots5.pdf result/Rplots5.jpg')
+
+knitr::knit2html("report.Rmd", 
+                 "result/report.html", 
+                 options = c("toc", "mathjax"))
+
