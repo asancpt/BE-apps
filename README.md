@@ -21,71 +21,71 @@ In this document, the author performed validation of bioequivalence tests perfor
 ```
 ## $AUClast
 ## $AUClast$`Analysis of Variance (log scale)`
-##                        SS DF         MS        F           p
-## SUBJECT        0.94975183 11 0.08634108 5.535104 0.005765629
-## GROUP          0.07059498  1 0.07059498 0.802985 0.391263228
-## SUBJECT(GROUP) 0.87915685 10 0.08791568 5.636048 0.005744766
-## PERIOD         0.14033475  1 0.14033475 8.996499 0.013356966
-## DRUG           0.04354548  1 0.04354548 2.791589 0.125713424
-## ERROR          0.15598817 10 0.01559882       NA          NA
-## TOTAL          1.25397585 23         NA       NA          NA
+##                          SS DF           MS           F            p
+## SUBJECT        2.875497e+00 32 8.985928e-02 3.183942248 0.0008742828
+## GROUP          1.024607e-01  1 1.024607e-01 1.145416548 0.2927731856
+## SUBJECT(GROUP) 2.773036e+00 31 8.945279e-02 3.169539016 0.0009544080
+## PERIOD         3.027399e-05  1 3.027399e-05 0.001072684 0.9740824428
+## DRUG           3.643467e-02  1 3.643467e-02 1.290972690 0.2645764201
+## ERROR          8.749021e-01 31 2.822265e-02          NA           NA
+## TOTAL          3.786834e+00 65           NA          NA           NA
 ## 
 ## $AUClast$`Between and Within Subject Variability`
 ##                                 Between Subject Within Subject
-## Variance Estimate                    0.03615843     0.01559882
-## Coefficient of Variation, CV(%)     19.18856461    12.53838639
+## Variance Estimate                    0.03061507     0.02822265
+## Coefficient of Variation, CV(%)     17.63193968    16.91883011
 ## 
 ## $AUClast$`Least Square Means (geometric mean)`
 ##                 Reference Drug Test Drug
-## Geometric Means        5195.63  4746.743
+## Geometric Means       5092.098  4858.245
 ## 
 ## $AUClast$`90% Confidence Interval of Geometric Mean Ratio (T/R)`
 ##                  Lower Limit Point Estimate Upper Limit
-## 90% CI for Ratio   0.8283005       0.913603     1.00769
+## 90% CI for Ratio    0.889436      0.9540753    1.023412
 ## 
 ## $AUClast$`Sample Size`
 ##                       True Ratio=1 True Ratio=Point Estimate
-## 80% Power Sample Size            4                         7
+## 80% Power Sample Size            6                         7
 ## 
 ## 
 ## $Cmax
 ## $Cmax$`Analysis of Variance (log scale)`
-##                        SS DF         MS        F         p
-## SUBJECT        1.00932428 11 0.09175675 2.031077 0.1372485
-## GROUP          0.13411132  1 0.13411132 1.532328 0.2440384
-## SUBJECT(GROUP) 0.87521296 10 0.08752130 1.937323 0.1560057
-## PERIOD         0.06523089  1 0.06523089 1.443915 0.2571915
-## DRUG           0.13429752  1 0.13429752 2.972736 0.1153959
-## ERROR          0.45176403 10 0.04517640       NA        NA
-## TOTAL          1.61536022 23         NA       NA        NA
+##                          SS DF           MS           F          p
+## SUBJECT        2.861492e+00 32 8.942162e-02 2.237604579 0.01367095
+## GROUP          9.735789e-05  1 9.735789e-05 0.001054764 0.97429977
+## SUBJECT(GROUP) 2.861394e+00 31 9.230304e-02 2.309706785 0.01131826
+## PERIOD         4.717497e-03  1 4.717497e-03 0.118046317 0.73348258
+## DRUG           6.837756e-03  1 6.837756e-03 0.171101730 0.68198228
+## ERROR          1.238856e+00 31 3.996310e-02          NA         NA
+## TOTAL          4.112258e+00 65           NA          NA         NA
 ## 
 ## $Cmax$`Between and Within Subject Variability`
 ##                                 Between Subject Within Subject
-## Variance Estimate                    0.02117245      0.0451764
-## Coefficient of Variation, CV(%)     14.62811443     21.4970692
+## Variance Estimate                    0.02616997      0.0399631
+## Coefficient of Variation, CV(%)     16.28355371     20.1921690
 ## 
 ## $Cmax$`Least Square Means (geometric mean)`
 ##                 Reference Drug Test Drug
-## Geometric Means       851.0539  726.1749
+## Geometric Means       825.5206  808.8778
 ## 
 ## $Cmax$`90% Confidence Interval of Geometric Mean Ratio (T/R)`
 ##                  Lower Limit Point Estimate Upper Limit
-## 90% CI for Ratio   0.7221693      0.8532655     1.00816
+## 90% CI for Ratio   0.9013625      0.9798396    1.065149
 ## 
 ## $Cmax$`Sample Size`
 ##                       True Ratio=1 True Ratio=Point Estimate
-## 80% Power Sample Size            9                        68
+## 80% Power Sample Size            8                         8
 ## 
 ## 
 ## $Tmax
 ## $Tmax$`Wilcoxon Signed-Rank Test`
 ##   p-value 
-## 0.1838384 
+## 0.2326894 
 ## 
 ## $Tmax$`Hodges-Lehmann Estimate`
 ##                            Lower Limit Point Estimate Upper Limit
-## 90% Confidence Interval       -0.49500         0.2725       0.655
-## 90% Confidence Interval(%)    50.46904       127.2670     165.541
+## 90% Confidence Interval       -0.33000       -0.03500      0.1050
+## 90% Confidence Interval(%)    74.37661       97.28237    108.1529
 ```
 
 # Plot
@@ -117,7 +117,7 @@ sessionInfo()
 ```
 ## R version 3.5.2 (2018-12-20)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 7 x64 (build 7601) Service Pack 1
+## Running under: Windows 10 x64 (build 17134)
 ## 
 ## Matrix products: default
 ## 
@@ -131,13 +131,13 @@ sessionInfo()
 ## 
 ## other attached packages:
 ## [1] knitr_1.21     bindrcpp_0.2.2 purrr_0.2.5    readr_1.3.1   
-## [5] tibble_1.4.2   tidyr_0.8.2    dplyr_0.7.8    BE_0.1.1      
+## [5] tibble_2.0.1   tidyr_0.8.2    dplyr_0.7.8    BE_0.1.1      
 ## [9] rtf_0.4-13    
 ## 
 ## loaded via a namespace (and not attached):
 ##  [1] Rcpp_1.0.0        bindr_0.1.1       magrittr_1.5     
 ##  [4] hms_0.4.2         tidyselect_0.2.5  R6_2.3.0         
-##  [7] rlang_0.3.0.1     fansi_0.4.0       stringr_1.3.1    
+##  [7] rlang_0.3.1       fansi_0.4.0       stringr_1.3.1    
 ## [10] tools_3.5.2       xfun_0.4          R.oo_1.22.0      
 ## [13] utf8_1.1.4        cli_1.0.1         assertthat_0.2.0 
 ## [16] crayon_1.3.4      evaluate_0.12     glue_1.3.0       
