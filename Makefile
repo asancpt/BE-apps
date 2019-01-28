@@ -11,3 +11,15 @@ readme:
 
 update:
 	Rscript -e ".libPaths() ; update.packages(dir('lib'))"
+
+
+
+pdf:
+	Rscript --quiet _render.R "bookdown::pdf_book"
+
+gitbook:
+	Rscript --quiet _render.R "bookdown::gitbook"
+
+all:
+	Rscript --quiet _render.R
+
