@@ -1,5 +1,37 @@
 ---
+#documentclass: book
+#papersize: A4
+#fontsize: 10pt
+#documentclass: krantz
+#geometry: "margin=4in"               
+#geometry: "a4paper,left=1.5in,right=1.5in,top=1in,bottom=1in"
+#geometry: "a4paper, nohead, nomarginpar, left=1.5in,right=1.5in,top=5in,bottom=3in,foot=1in"
+#geometry: "a4paper, nohead, nomarginpar"
+#geometry: "total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot"
+#geometry: "a4paper, nohead, nomarginpar, left=1.5in,right=1.5in,top=1in,bottom=1in, includeheadfoot"
 title: "EDISON 사이언스 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합"
+date: "`r Sys.Date()`"
+documentclass: krantz
+biblio-style: apalike
+link-citations: yes
+colorlinks: yes
+fontsize: 12pt
+header-includes:
+  - \usepackage{kotex}
+output:
+  bookdown::pdf_book: 
+    keep_tex: yes
+    pandoc_args: --top-level-division=chapter
+    toc_depth: 3
+    toc_unnumbered: no
+    toc_appendix: yes
+    #template: null
+    #dev: "cairo_pdf"
+    latex_engine: xelatex
+    #includes:
+    #  in_header: latex/preamble.tex
+    #  before_body: latex/before_body.tex
+    #  after_body: latex/after_body.tex
 ---
 
 
@@ -9,7 +41,6 @@ title: "EDISON 사이언스 앱을 사용한 비구획분석과 생물학적동�
 
 생물학적동등성은 비구획분석으로 계산된 약동학적 파라미터를 사용하여 통계 분석을 수행함으로 판단할 수 있다. 현재는 이러한 분석을 위해서 여러 상용 소프트웨어를 필요로 하는 복잡한 단계를 거쳐야 한다.  따라서 분석 시간이 오래 걸리고 많은 비용이 소모되었다. 본 저자들은 EDISON 사이언스 앱을 사용하여 이 두 과정을 통합하였고, 이로서 농도-시간 자료로부터 비구획분석과 생물학적동등성 통계 분석까지 연속적으로 가능하게 되었다. 본 연구가 제시하는 EDISON 사이언스 앱을 통한 방법을 통해 정확한 분석을 빠른 시간에 수행할 수 있을 뿐만 아니라 오류를 줄이고 비용을 절감하는 효과를 가져올 수 있다.
 
- 
 한성필†, 윤석규, 조용순, 김형섭, 배균섭\*  
 서울아산병원 임상약리학과, 울산대학교병원, 서울특별시 송파구 올림픽로 43 길 88  
 E-mail: 한성필 <shan@acp.kr> , 배균섭 <ksbae@acp.kr>
@@ -27,11 +58,28 @@ E-mail: 한성필 <shan@acp.kr> , 배균섭 <ksbae@acp.kr>
 # 이론 및 계산방법 {#method}
 
 ## EDISON 사이언스 앱과 R 패키지
-본 분석에서 사용될 EDISON 사이언스 앱은 NonCompartEdison, edisonBE 두 종류이다. 각각 비구획분석과 생물학적동등성 통계 분석을 하게 되며 R 기반 [4] 으로 프로그래밍 되어 있다. 각각은 NonCompart와 BE라는 이름의 R 패키지 형태로 공개되어 배포 되고 있다. 
-EDISON 사이언스 앱을 제작하는데 사용한 R 코드 및 자료(datasets)는 https://github.com/asancpt/edison-noncompart,https://github.com/asancpt/edison-BE 에 각각 공개되어 있다. 
+
+본 분석에서 사용될 EDISON 사이언스 앱은 `NonCompartEdison`, `edisonBE` 두 종류이다. 
+비구획분석과 생물학적동등성 통계 분석을 하게 되며 R 기반 [4] 으로 프로그래밍 되어 있다. 
+각각은 `NonCompart`와 `BE`라는 이름의 R 패키지 형태로 공개되어 배포 되고 있다. 
+R 콘솔에서는 다음을 입력함으로서 각 라이브러리를 불러올 수 있다.
+
+```r
+install.packages("NonCompart")
+install.packages("BE")
+
+library(NonCompart)
+library(BE)
+```
+
+EDISON 사이언스 앱을 제작하는데 사용한 R 코드 및 자료(datasets)는 <https://github.com/asancpt/edison-noncompart>, <https://github.com/asancpt/edison-BE> 에 각각 공개되어 있다. 
 
 ## 모형
-Yijk = μ + Sik + Pj + Fj,k + C( j - 1, k )+ εijk
+
+$$
+Y_{ijk} = \mu + S_{ik} + P_{j} + F_{j,k} + C_{(j-1,k)} + \varepsilon_{ijk}
+$$
+
 이때에 μ; 전체 평균, Sik; k 번째 sequence에서 i 번째 subject의 효과(랜덤), Pj : j번째 period 의 효과(고정), Fj, k; k 번째 sequence에서 j 번째 period의 제제의 효과(고정), C(j-1,k): k 번째 sequence에서(j-1) 번째 period의 잔류효과(고정), εijk : 오차항으로 정의한다. 이 모델에서 사용하는 가정은 1) Sik ∼ N(0,σs²), 2) εijk ∼ N(0,σe²), 3) Sik 와 εijk가 독립이라는 세가지 이다. 이때 (μT - μR)에 대한 (1-2α)×100% 신뢰구간이 ln(0.8), ln(1.25) 안에 들어가면 두제제가 생물학적으로 동등하다 결론을 내릴 수 있다. 
 
 ## SAS 코드
@@ -159,7 +207,4 @@ Figure 3. Comparison between a traditional analysis process (left boxes) and the
 2.	Chow S-C, Liu J-p. Design and analysis of bioavailability and bioequivalence studies. Chapman & Hall/CRC biostatistics series, vol 27, 3rd edn. CRC Press, Boca Raton, 2009
 3.	Yoon S-H, Hwang N-A, Lim Y-C, Lee Y-B, Park J-S. Development of BioEquiv, a Computer Program for the Analysis of Bioequivalence. Journal of Korean Pharmaceutical Sciences 2010;40:1-7. doi: 10.4333/kps.2010.40.1.001.
 4.	R Core Team, R Foundation for Statistical Computing. R: A Language and Environment for Statistical Computing. https://www.R-project.org/ 2018
-
- 
- 
 

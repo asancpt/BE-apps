@@ -24,6 +24,7 @@
 
 
 
+<meta name="date" content="2019-01-28">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +49,69 @@
 
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 </head>
 
@@ -100,13 +164,23 @@
 <h1><span class="header-section-number">Chapter 2</span> 이론 및 계산방법</h1>
 <div id="edison---r-" class="section level2">
 <h2><span class="header-section-number">2.1</span> EDISON 사이언스 앱과 R 패키지</h2>
-<p>본 분석에서 사용될 EDISON 사이언스 앱은 NonCompartEdison, edisonBE 두 종류이다. 각각 비구획분석과 생물학적동등성 통계 분석을 하게 되며 R 기반 [4] 으로 프로그래밍 되어 있다. 각각은 NonCompart와 BE라는 이름의 R 패키지 형태로 공개되어 배포 되고 있다.
-EDISON 사이언스 앱을 제작하는데 사용한 R 코드 및 자료(datasets)는 <a href="https://github.com/asancpt/edison-noncompart,https://github.com/asancpt/edison-BE" class="uri">https://github.com/asancpt/edison-noncompart,https://github.com/asancpt/edison-BE</a> 에 각각 공개되어 있다.</p>
+<p>본 분석에서 사용될 EDISON 사이언스 앱은 <code>NonCompartEdison</code>, <code>edisonBE</code> 두 종류이다.
+비구획분석과 생물학적동등성 통계 분석을 하게 되며 R 기반 [4] 으로 프로그래밍 되어 있다.
+각각은 <code>NonCompart</code>와 <code>BE</code>라는 이름의 R 패키지 형태로 공개되어 배포 되고 있다.
+R 콘솔에서는 다음을 입력함으로서 각 라이브러리를 불러올 수 있다.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;NonCompart&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&quot;BE&quot;</span>)
+
+<span class="kw">library</span>(NonCompart)
+<span class="kw">library</span>(BE)</code></pre>
+<p>EDISON 사이언스 앱을 제작하는데 사용한 R 코드 및 자료(datasets)는 <a href="https://github.com/asancpt/edison-noncompart" class="uri">https://github.com/asancpt/edison-noncompart</a>, <a href="https://github.com/asancpt/edison-BE" class="uri">https://github.com/asancpt/edison-BE</a> 에 각각 공개되어 있다.</p>
 </div>
 <div id="section-1" class="section level2">
 <h2><span class="header-section-number">2.2</span> 모형</h2>
-<p>Yijk = μ + Sik + Pj + Fj,k + C( j - 1, k )+ εijk
-이때에 μ; 전체 평균, Sik; k 번째 sequence에서 i 번째 subject의 효과(랜덤), Pj : j번째 period 의 효과(고정), Fj, k; k 번째 sequence에서 j 번째 period의 제제의 효과(고정), C(j-1,k): k 번째 sequence에서(j-1) 번째 period의 잔류효과(고정), εijk : 오차항으로 정의한다. 이 모델에서 사용하는 가정은 1) Sik ∼ N(0,σs²), 2) εijk ∼ N(0,σe²), 3) Sik 와 εijk가 독립이라는 세가지 이다. 이때 (μT - μR)에 대한 (1-2α)×100% 신뢰구간이 ln(0.8), ln(1.25) 안에 들어가면 두제제가 생물학적으로 동등하다 결론을 내릴 수 있다.</p>
+<p><span class="math display">\[
+Y_{ijk} = \mu + S_{ik} + P_{j} + F_{j,k} + C_{(j-1,k)} + \varepsilon_{ijk}
+\]</span></p>
+<p>이때에 μ; 전체 평균, Sik; k 번째 sequence에서 i 번째 subject의 효과(랜덤), Pj : j번째 period 의 효과(고정), Fj, k; k 번째 sequence에서 j 번째 period의 제제의 효과(고정), C(j-1,k): k 번째 sequence에서(j-1) 번째 period의 잔류효과(고정), εijk : 오차항으로 정의한다. 이 모델에서 사용하는 가정은 1) Sik ∼ N(0,σs²), 2) εijk ∼ N(0,σe²), 3) Sik 와 εijk가 독립이라는 세가지 이다. 이때 (μT - μR)에 대한 (1-2α)×100% 신뢰구간이 ln(0.8), ln(1.25) 안에 들어가면 두제제가 생물학적으로 동등하다 결론을 내릴 수 있다.</p>
 </div>
 <div id="sas-" class="section level2">
 <h2><span class="header-section-number">2.3</span> SAS 코드</h2>
@@ -173,7 +247,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["bioequivalence.pdf"],
 "toc": {
 "collapse": "subsection"
 }
@@ -181,6 +255,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
