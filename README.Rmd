@@ -19,6 +19,10 @@ The statistical model includes factors accounting for the following sources of v
 
 In this document, the author performed validation of bioequivalence tests performed by `BE` R package as compared to bioequivalence tests performed by PROC GLM or PROC MIXED in SAS.
 
+# Poster
+
+![](final/poster.png)
+
 # Results
 
 ```{bash echo = FALSE, result = 'asis'}
@@ -29,20 +33,18 @@ cat result/report.txt
 
 ## AUClast
 
-![](Rplots.png)
-![](Rplots1.png)
+![](Rplots/Rplots.png)
+![](Rplots/Rplots1.png)
 
 ## Cmax
 
-![](Rplots2.png)
-![](Rplots3.png)
+![](Rplots/Rplots2.png)
+![](Rplots/Rplots3.png)
 
 ## Tmax
 
-![](Rplots4.png) 
-![](Rplots5.png)
-
-
+![](Rplots/Rplots4.png) 
+![](Rplots/Rplots5.png)
 
 # References
 

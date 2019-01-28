@@ -23,7 +23,6 @@ Design 2x2'
 
 arguments <- commandArgs(trailingOnly = TRUE) 
 if (length(arguments) == 0) { arguments <- c("-inp", input_deck, "-file", "NCAResult4BE.csv") }
-#if (length(arguments) == 0) { arguments <- c("-inp", input_deck) }
 
 table_args <- matrix(arguments, ncol = 2, byrow = TRUE) %>% 
   as_tibble() %>% 
@@ -55,10 +54,11 @@ system(sprintf('%s -density 300 Rplots2.pdf Rplots2.png', magick))
 system(sprintf('%s -density 300 Rplots3.pdf Rplots3.png', magick))
 system(sprintf('%s -density 300 Rplots4.pdf Rplots4.png', magick))
 system(sprintf('%s -density 300 Rplots5.pdf Rplots5.png', magick))
-system('cp *.jpg *.png ../')
+system('cp Rplots*.png ../Rplots/')
 setwd('..')
 
 # Rmarkdown ----
 
 knitr::knit2html("README.Rmd", "result/report.html", options = c("toc", "mathjax"))
 knitr::knit2html("raw_data.Rmd", "result/raw_data.html", options = c("toc", "mathjax"))
+
