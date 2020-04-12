@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합</title>
-  <meta name="description" content="Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱, R 샤이니 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합</title>
+  <meta name="description" content="Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱, R 샤이니 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합" />
+  <meta property="og:title" content="Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱, R 샤이니 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합" />
   <meta property="og:type" content="book" />
   
   
@@ -17,22 +16,22 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합" />
+  <meta name="twitter:title" content="Chapter 2 이론 및 계산방법 | EDISON 사이언스 앱, R 샤이니 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합" />
   
   
   
 
 
 
-<meta name="date" content="2019-01-28">
+<meta name="date" content="2020-04-13" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html">
-<link rel="next" href="result.html">
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="result.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +39,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -55,7 +57,6 @@ a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
 a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
@@ -128,16 +129,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>책 머리에</a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 서론</a></li>
 <li class="chapter" data-level="2" data-path="method.html"><a href="method.html"><i class="fa fa-check"></i><b>2</b> 이론 및 계산방법</a><ul>
-<li class="chapter" data-level="2.1" data-path="method.html"><a href="method.html#edison---r-"><i class="fa fa-check"></i><b>2.1</b> EDISON 사이언스 앱과 R 패키지</a></li>
-<li class="chapter" data-level="2.2" data-path="method.html"><a href="method.html#section-1"><i class="fa fa-check"></i><b>2.2</b> 모형</a></li>
-<li class="chapter" data-level="2.3" data-path="method.html"><a href="method.html#sas-"><i class="fa fa-check"></i><b>2.3</b> SAS 코드</a></li>
-<li class="chapter" data-level="2.4" data-path="method.html"><a href="method.html#section-2"><i class="fa fa-check"></i><b>2.4</b> 자료의 형태, 자료의 구성요소</a></li>
+<li class="chapter" data-level="2.1" data-path="method.html"><a href="method.html#edison-사이언스-앱-r-샤이니-앱과-r-패키지"><i class="fa fa-check"></i><b>2.1</b> EDISON 사이언스 앱, R 샤이니 앱과 R 패키지</a></li>
+<li class="chapter" data-level="2.2" data-path="method.html"><a href="method.html#모형"><i class="fa fa-check"></i><b>2.2</b> 모형</a></li>
+<li class="chapter" data-level="2.3" data-path="method.html"><a href="method.html#sas-코드"><i class="fa fa-check"></i><b>2.3</b> SAS 코드</a></li>
+<li class="chapter" data-level="2.4" data-path="method.html"><a href="method.html#자료의-형태-자료의-구성요소"><i class="fa fa-check"></i><b>2.4</b> 자료의 형태, 자료의 구성요소</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="result.html"><a href="result.html"><i class="fa fa-check"></i><b>3</b> 결과</a><ul>
-<li class="chapter" data-level="3.1" data-path="result.html"><a href="result.html#noncompartedison---"><i class="fa fa-check"></i><b>3.1</b> NonCompartEdison 앱을 통한 비구획분석</a></li>
-<li class="chapter" data-level="3.2" data-path="result.html"><a href="result.html#edisonbe----"><i class="fa fa-check"></i><b>3.2</b> edisonBE 앱을 통한 생물학적동등성 판단</a></li>
-<li class="chapter" data-level="3.3" data-path="result.html"><a href="result.html#sas--"><i class="fa fa-check"></i><b>3.3</b> 90% 신뢰구간의 SAS 결과값과 비교</a></li>
-<li class="chapter" data-level="3.4" data-path="result.html"><a href="result.html#section-3"><i class="fa fa-check"></i><b>3.4</b> 샘플 수 계산</a></li>
+<li class="chapter" data-level="3.1" data-path="result.html"><a href="result.html#noncompartedison-앱을-통한-비구획분석"><i class="fa fa-check"></i><b>3.1</b> NonCompartEdison 앱을 통한 비구획분석</a></li>
+<li class="chapter" data-level="3.2" data-path="result.html"><a href="result.html#edisonbe-앱을-통한-생물학적동등성-판단"><i class="fa fa-check"></i><b>3.2</b> edisonBE 앱을 통한 생물학적동등성 판단</a></li>
+<li class="chapter" data-level="3.3" data-path="result.html"><a href="result.html#신뢰구간의-sas-결과값과-비교"><i class="fa fa-check"></i><b>3.3</b> 90% 신뢰구간의 SAS 결과값과 비교</a></li>
+<li class="chapter" data-level="3.4" data-path="result.html"><a href="result.html#샘플-수-계산"><i class="fa fa-check"></i><b>3.4</b> 샘플 수 계산</a></li>
+<li class="chapter" data-level="3.5" data-path="result.html"><a href="result.html#r-샤이니-앱"><i class="fa fa-check"></i><b>3.5</b> R 샤이니 앱</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i><b>4</b> 논의</a></li>
 <li class="chapter" data-level="5" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>5</b> 결론</a></li>
@@ -152,7 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EDISON 사이언스 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EDISON 사이언스 앱, R 샤이니 앱을 사용한 비구획분석과 생물학적동등성 분석의 통합</a>
           </h1>
         </div>
 
@@ -162,29 +164,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="method" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> 이론 및 계산방법</h1>
-<div id="edison---r-" class="section level2">
-<h2><span class="header-section-number">2.1</span> EDISON 사이언스 앱과 R 패키지</h2>
-<p>본 분석에서 사용될 EDISON 사이언스 앱은 <code>NonCompartEdison</code>, <code>edisonBE</code> 두 종류이다.
+<div id="edison-사이언스-앱-r-샤이니-앱과-r-패키지" class="section level2">
+<h2><span class="header-section-number">2.1</span> EDISON 사이언스 앱, R 샤이니 앱과 R 패키지</h2>
+<p>본 분석에서 사용될 EDISON 사이언스 앱, R 샤이니 앱은 <code>NonCompartEdison</code>, <code>edisonBE</code> 두 종류이다.
 비구획분석과 생물학적동등성 통계 분석을 하게 되며 R 기반 [4] 으로 프로그래밍 되어 있다.
 각각은 <code>NonCompart</code>와 <code>BE</code>라는 이름의 R 패키지 형태로 공개되어 배포 되고 있다.
 R 콘솔에서는 다음을 입력함으로서 각 라이브러리를 불러올 수 있다.</p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;NonCompart&quot;</span>)
-<span class="kw">install.packages</span>(<span class="st">&quot;BE&quot;</span>)
-
-<span class="kw">library</span>(NonCompart)
-<span class="kw">library</span>(BE)</code></pre>
-<p>EDISON 사이언스 앱을 제작하는데 사용한 R 코드 및 자료(datasets)는 <a href="https://github.com/asancpt/edison-noncompart" class="uri">https://github.com/asancpt/edison-noncompart</a>, <a href="https://github.com/asancpt/edison-BE" class="uri">https://github.com/asancpt/edison-BE</a> 에 각각 공개되어 있다.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;NonCompart&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">install.packages</span>(<span class="st">&quot;BE&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(NonCompart)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">library</span>(BE)</a></code></pre></div>
+<p>EDISON 사이언스 앱, R 샤이니 앱을 제작하는데 사용한 R 코드 및 자료(datasets)는 <a href="https://github.com/asancpt/edison-noncompart" class="uri">https://github.com/asancpt/edison-noncompart</a>, <a href="https://github.com/asancpt/edison-BE" class="uri">https://github.com/asancpt/edison-BE</a> 에 각각 공개되어 있다.</p>
 </div>
-<div id="section-1" class="section level2">
+<div id="모형" class="section level2">
 <h2><span class="header-section-number">2.2</span> 모형</h2>
 <p><span class="math display">\[
 Y_{ijk} = \mu + S_{ik} + P_{j} + F_{j,k} + C_{(j-1,k)} + \varepsilon_{ijk}
 \]</span></p>
 <p>이때에 μ; 전체 평균, Sik; k 번째 sequence에서 i 번째 subject의 효과(랜덤), Pj : j번째 period 의 효과(고정), Fj, k; k 번째 sequence에서 j 번째 period의 제제의 효과(고정), C(j-1,k): k 번째 sequence에서(j-1) 번째 period의 잔류효과(고정), εijk : 오차항으로 정의한다. 이 모델에서 사용하는 가정은 1) Sik ∼ N(0,σs²), 2) εijk ∼ N(0,σe²), 3) Sik 와 εijk가 독립이라는 세가지 이다. 이때 (μT - μR)에 대한 (1-2α)×100% 신뢰구간이 ln(0.8), ln(1.25) 안에 들어가면 두제제가 생물학적으로 동등하다 결론을 내릴 수 있다.</p>
 </div>
-<div id="sas-" class="section level2">
+<div id="sas-코드" class="section level2">
 <h2><span class="header-section-number">2.3</span> SAS 코드</h2>
-<p>SAS는 통계 패키지중에서는 가장 방대하고 다양한 분석을 제공하고 전 세계적으로 생물학적동등성의 판단을 위해 표준으로 사용되고 있다. 다음과 같이 2x2 교차설계 자료를 분석하기 위한 SAS 코드 (PROC GLM, PROC MIXED, SAS version 9.4)를 작성하고 EDISON 사이언스 앱에서 계산된 결과와 비교하였다.</p>
+<p>SAS는 통계 패키지중에서는 가장 방대하고 다양한 분석을 제공하고 전 세계적으로 생물학적동등성의 판단을 위해 표준으로 사용되고 있다. 다음과 같이 2x2 교차설계 자료를 분석하기 위한 SAS 코드 (PROC GLM, PROC MIXED, SAS version 9.4)를 작성하고 EDISON 사이언스 앱, R 샤이니 앱에서 계산된 결과와 비교하였다.</p>
 <pre class="sas"><code>PROC GLM DATA=BE OUTSTAT=STATRES; /* GLM use only complete subjects. */
 CLASS SEQ PRD TRT SUBJ;
 MODEL LNAUCL = SEQ SUBJ(SEQ) PRD TRT;
@@ -198,10 +199,12 @@ RANDOM SUBJ(SEQ);
 ESTIMATE &#39;T VS R&#39; TRT -1 1 /CL ALPHA=0.1;
 ODS OUTPUT ESTIMATES=ESTIM COVPARMS=COVPAR;</code></pre>
 </div>
-<div id="section-2" class="section level2">
+<div id="자료의-형태-자료의-구성요소" class="section level2">
 <h2><span class="header-section-number">2.4</span> 자료의 형태, 자료의 구성요소</h2>
-<p>2x2 cross-over design이 가장 기본적인 디자인(통상 RT / TR)으로 사용된다. 피험자를 무작위로 두 군으로 나누어 각 군별로 동일 성분의 대조약과 시험약을 각각 투여(제1기 투약)하고 피험자별로 투약 전후 정해진 시간마다 채혈하고 농도 측정한다. 이전에 투여한 약이 모두 배설될 정도로 충분한 기간 경과 (보통 반감기의 5배 이상) 후 각 군별로 대조약과 시험약을 바꾸어 각각 투여하고(제2기 투약) 동일하게 혈액 채취 및 혈중농도 측정하게 된다.
-본 논문에서는 위와 같은 시나리오로 시뮬레이션을 통해 얻어진 약동학 파라미터를 사용해 자료가 구성되었고, EDISON 사이언스 앱인 NonCompartEdison에서 입력으로 사용될 자료의 형태는 Table 1와 같다. SEQ (sequence), TRT (treatment), SUBJ (subject), and PRD (period, 기)의 자료가 열 형태로 제시되어야 하며 이는 edisonBE 앱에서 사용되는 약동학 파라미터 자료에도 일종의 primary key로 사용되기 때문에 유사한 형태로 보존되어야 한다. 33명의 대상자의 개인별 농도-시간 그래프는 Figure 1에 나타내었다.</p>
+<p>2x2 cross-over design이 가장 기본적인 디자인(통상 RT / TR)으로 사용된다. 피험자를 무작위로 두 군으로 나누어 각 군별로 동일 성분의 대조약과 시험약을 각각 투여(제1기 투약)하고 피험자별로 투약 전후 정해진 시간마다 채혈하고 농도 측정한다. 이전에 투여한 약이 모두 배설될 정도로 충분한 기간 경과 (보통 반감기의 5배 이상) 후 각 군별로 대조약과 시험약을 바꾸어 각각 투여하고(제2기 투약) 동일하게 혈액 채취 및 혈중농도 측정하게 된다.</p>
+<p>본 논문에서는 위와 같은 시나리오로 시뮬레이션을 통해 얻어진 약동학 파라미터를 사용해 자료가 구성되었고, EDISON 사이언스 앱인 NonCompartEdison에서 입력으로 사용될 자료의 형태는 Table 1와 같다. SEQ (sequence), TRT (treatment), SUBJ (subject), and PRD (period, 기)의 자료가 열 형태로 제시되어야 하며 이는 edisonBE 앱에서 사용되는 약동학 파라미터 자료에도 일종의 primary key로 사용되기 때문에 유사한 형태로 보존되어야 한다. 33명의 대상자의 개인별 농도-시간 그래프는 Figure 1에 나타내었다.</p>
+<p><img src="assets-paper/figure-1.png" /></p>
+<p>Figure 1. Concentration-time curves of raw data (N=33)</p>
 </div>
 </div>
             </section>
@@ -215,11 +218,13 @@ ODS OUTPUT ESTIMATES=ESTIM COVPARMS=COVPAR;</code></pre>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -227,12 +232,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -244,6 +248,10 @@ gitbook.start({
 "text": null
 },
 "history": {
+"link": null,
+"text": null
+},
+"view": {
 "link": null,
 "text": null
 },
@@ -262,8 +270,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
