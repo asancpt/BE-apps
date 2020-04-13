@@ -121,9 +121,9 @@ performed by PROC GLM or PROC MIXED in SAS.
 sessionInfo()
 ```
 
-    ## R version 3.5.2 (2018-12-20)
+    ## R version 3.6.3 (2020-02-29)
     ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-    ## Running under: Windows 7 x64 (build 7601) Service Pack 1
+    ## Running under: Windows 10 x64 (build 17763)
     ## 
     ## Matrix products: default
     ## 
@@ -136,9 +136,9 @@ sessionInfo()
     ## [1] stats     graphics  grDevices utils     datasets  methods   base     
     ## 
     ## other attached packages:
-    ## [1] knitr_1.21
+    ## [1] knitr_1.28
     ## 
     ## loaded via a namespace (and not attached):
-    ##  [1] compiler_3.5.2  magrittr_1.5    tools_3.5.2     htmltools_0.3.6
-    ##  [5] Rcpp_1.0.0      stringi_1.2.4   rmarkdown_1.11  stringr_1.3.1  
-    ##  [9] xfun_0.4        digest_0.6.18   evaluate_0.12
+    ##  [1] compiler_3.6.3  magrittr_1.5    tools_3.6.3     htmltools_0.4.0
+    ##  [5] Rcpp_1.0.4.6    stringi_1.4.6   rmarkdown_2.1   stringr_1.4.0  
+    ##  [9] xfun_0.12       digest_0.6.25   rlang_0.4.5     evaluate_0.14
